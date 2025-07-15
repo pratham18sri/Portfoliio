@@ -298,14 +298,14 @@ function App() {
             
             <div className="fact-card">
               <div className="fact-icon">🌱</div>
-              <h3>Plant Parent</h3>
-              <p>Growing 12+ indoor plants including a fiddle leaf fig</p>
+              <h3>Planting</h3>
+              <p>Growing 12+ indoor plants including a tulsa ji plant</p>
             </div>
             
             <div className="fact-card">
               <div className="fact-icon">✈️</div>
               <h3>Travel Enthusiast</h3>
-              <p>Visited 5 countries - next goal: Japan!</p>
+              <p>Visited 5 states - next goal:South India</p>
             </div>
           </div>
         </section>
