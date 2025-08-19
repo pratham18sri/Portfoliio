@@ -20,10 +20,9 @@ import css from './assets/css.png';
 import jwt from './assets/jwt.png';
 import java from './assets/java.png';
 import firebase from './assets/firebase.png';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import UpcomingProjects from './Components/upcoming/upcoming';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +30,7 @@ function App() {
   // Refs for animations
   const nameref = useRef(null);
   const paragraphRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Name animation
   useEffect(() => {
@@ -84,6 +84,14 @@ function App() {
     }
   });
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   const demoItems = [
     { 
@@ -110,6 +118,40 @@ function App() {
 
   return (
     <>
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="nav-container">
+          <div className="nav-logo">
+            <span>Pratham</span>
+          </div>
+          <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+            <div className="nav-item" onClick={() => scrollToSection('about')}>
+              About
+            </div>
+            <div className="nav-item" onClick={() => scrollToSection('skills')}>
+              Skills
+            </div>
+            <div className="nav-item" onClick={() => scrollToSection('projects')}>
+              Projects
+            </div>
+            <div className="nav-item" onClick={() => scrollToSection('connect')}>
+              Connect
+            </div>
+            <div className="nav-item" onClick={() => scrollToSection('contact')}>
+              Contact
+            </div>
+          </div>
+          <div 
+            className={`nav-hamburger ${isMenuOpen ? 'active' : ''}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+        </div>
+      </nav>
+
       <div className='background'>
         <Background />
 
@@ -129,7 +171,7 @@ function App() {
         </section>
 
         {/* About Section */}
-        <section className="about-section">
+        <section id="about" className="about-section">
           <div className="photo-container">
             <div className="photo">
               <img src={myphoto} alt="Pratham" />
@@ -147,7 +189,7 @@ function App() {
         </section>
 
         {/* Skills Section */}
-        <section className="skills-section">
+        <section id="skills" className="skills-section">
           <div className="skills-container">
             <div className="top-skills">
               <h1>Top Skills</h1>
@@ -183,7 +225,7 @@ function App() {
         </section>
 
         {/* Projects Section */}
-        <section className="projects-section">
+        <section id="projects" className="projects-section">
           <div className='section-header'>
             <h1 className='projects-heading'>Projects</h1>
           </div>
@@ -300,11 +342,14 @@ function App() {
             </div>
           </div>
         </section>
+        
         {/* Connect Section */}
-        <h1 className='coonect-headig'>Connect with me</h1>
-        <div style={{ height: '400px', position: 'relative' }}>
-          <Coonect items={demoItems} />
-        </div>
+        <section id="connect">
+          <h1 className='coonect-headig'>Connect with me</h1>
+          <div style={{ height: '400px', position: 'relative' }}>
+            <Coonect items={demoItems} />
+          </div>
+        </section>
 
         {/* Fun Facts Section */}
         <section className="fun-facts-section">
@@ -333,7 +378,7 @@ function App() {
         </section>
 
         {/* Contact Section */}
-        <section className="contact-section">
+        <section id="contact" className="contact-section">
           <div className="contact-container">
             <div className="contact-header">
               <h2 className="contact-title">Get in Touch</h2>
