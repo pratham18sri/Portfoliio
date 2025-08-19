@@ -231,34 +231,35 @@ function App() {
           </div>
 
           <div className='project-container'>
-            {/* Veda Project Card */}
-            <div className="project-card">
-              <div className="project-image image4">
-                <div className="project-overlay">
-                  <h3>Veda Platform</h3>
-                  <p>
-                    Veda is a modern web platform built with React, offering interactive features and a responsive user experience.
-                  </p>
-                </div>
-              </div>
-              <div className="project-details">
-                <p className="project-description">
-                  Veda is a responsive web application that showcases modern development practices with React. It features a clean UI, smooth animations, and efficient state management. The platform provides users with an intuitive interface for content interaction and management, deployed on Render for reliable performance.
+  {/* Veda Project Card */}
+          <div className="project-card">
+            <div className="project-image image4">
+              <div className="project-overlay">
+                <h3>Veda AI Assistant</h3>
+                <p>
+                  Veda (Virtual Evolutionary Digital Assistant) is an AI-powered assistant built with React and Gemini Pro API.
                 </p>
-                <div className='project-link'>
-                  <Link to="https://veda-2-0.onrender.com" target="_blank" rel="noopener noreferrer">
-                    <button className="cta-button">
-                      <span>Visit Website</span>
-                      <svg width="15px" height="10px" viewBox="0 0 13 10">
-                        <path d="M1,5 L11,5"></path>
-                        <polyline points="8 1 12 5 8 9"></polyline>
-                      </svg>
-                    </button>
-                  </Link>
-                </div>
               </div>
             </div>
-            {/* End of Veda Project Card */}
+            <div className="project-details">
+              <p className="project-description">
+                Veda is an intelligent virtual assistant that leverages Google's Gemini Pro API to provide daily AI assistance. 
+                This responsive React application can search for information, answer questions, and assist with various tasks 
+                through natural conversation. With a clean, modern interface and seamless API integration.
+              </p>
+              <div className='project-link'>
+                <Link to="https://veda-2-0.onrender.com" target="_blank" rel="noopener noreferrer">
+                  <button className="cta-button">
+                    <span>Visit Website</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
 
             <div className="project-card">
               <div className="project-image image1">
