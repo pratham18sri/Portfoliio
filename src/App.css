@@ -339,6 +339,9 @@ section {
 .image3 {
   background-image: url('./assets/Screenshot 2025-07-03 164238.png');
 }
+.image4{
+  background-image: url('./assets/veda.png');
+}
 
 .project-overlay {
   position: absolute;

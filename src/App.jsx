@@ -3,7 +3,6 @@ import Background from '../src/Components/Background/Background';
 import Welcome from '../src/Components/Welcome/Welcome';
 import Coonect from './Components/Connect/connect';
 import './App.css';
-
 import logo from './assets/logo.png';
 import myphoto from './assets/myphoto.png';
 import react from './assets/react.svg';
@@ -190,6 +189,35 @@ function App() {
           </div>
 
           <div className='project-container'>
+            {/* Veda Project Card */}
+            <div className="project-card">
+              <div className="project-image image4">
+                <div className="project-overlay">
+                  <h3>Veda Platform</h3>
+                  <p>
+                    Veda is a modern web platform built with React, offering interactive features and a responsive user experience.
+                  </p>
+                </div>
+              </div>
+              <div className="project-details">
+                <p className="project-description">
+                  Veda is a responsive web application that showcases modern development practices with React. It features a clean UI, smooth animations, and efficient state management. The platform provides users with an intuitive interface for content interaction and management, deployed on Render for reliable performance.
+                </p>
+                <div className='project-link'>
+                  <Link to="https://veda-2-0.onrender.com" target="_blank" rel="noopener noreferrer">
+                    <button className="cta-button">
+                      <span>Visit Website</span>
+                      <svg width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* End of Veda Project Card */}
+
             <div className="project-card">
               <div className="project-image image1">
                 <div className="project-overlay">
@@ -217,67 +245,61 @@ function App() {
               </div>
             </div>
 
-            <div className="project-container">
-              <div className="project-card">
-                <div className="project-image image2">
-                  <div className="project-overlay">
-                    <h3>CryptoPlace Application</h3>
-                    <p>
-                      CryptoPlace is a cryptocurrency marketplace web application that provides real-time data and insights.
-                    </p>
-                  </div>
-                </div>
-                <div className="project-details">
-                  <p className="project-description">
-                    CryptoPlace is a modern cryptocurrency marketplace web app that offers real-time data, price trends, and detailed information about various cryptocurrencies. Using API integration, it provides users with accurate insights, market rankings, and analytics to help them track, compare, and make informed decisions about crypto investments in a user-friendly interface.
+            <div className="project-card">
+              <div className="project-image image2">
+                <div className="project-overlay">
+                  <h3>CryptoPlace Application</h3>
+                  <p>
+                    CryptoPlace is a cryptocurrency marketplace web application that provides real-time data and insights.
                   </p>
-                  <div className='project-link'>
-                    <Link to="https://cryptoplace-kappa-orcin.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      <button className="cta-button">
-                        <span>Visit Website</span>
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                          <path d="M1,5 L11,5"></path>
-                          <polyline points="8 1 12 5 8 9"></polyline>
-                        </svg>
-                      </button>
-                    </Link>
-                  </div>
+                </div>
+              </div>
+              <div className="project-details">
+                <p className="project-description">
+                  CryptoPlace is a modern cryptocurrency marketplace web app that offers real-time data, price trends, and detailed information about various cryptocurrencies. Using API integration, it provides users with accurate insights, market rankings, and analytics to help them track, compare, and make informed decisions about crypto investments in a user-friendly interface.
+                </p>
+                <div className='project-link'>
+                  <Link to="https://cryptoplace-kappa-orcin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <button className="cta-button">
+                      <span>Visit Website</span>
+                      <svg width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
 
-            <div className="project-container">
-              <div className="project-card">
-                <div className="project-image image3">
-                  <div className="project-overlay">
-                    <h3>Golf-yard Website</h3>
-                    <p>
-                      I created a dynamic Golf Yard website using HTML, CSS, JavaScript, and GSAP.
-                    </p>
-                  </div>
-                </div>
-                <div className="project-details">
-                  <p className="project-description">
-                    I developed a visually engaging Golf Yard website for a client using HTML, CSS, JavaScript, and GSAP. The site features smooth scroll animations, an elegant layout, and responsive design to showcase golf courses, services, and events. It offers users an immersive and interactive browsing experience, optimized for all devices.
+            <div className="project-card">
+              <div className="project-image image3">
+                <div className="project-overlay">
+                  <h3>Golf-yard Website</h3>
+                  <p>
+                    I created a dynamic Golf Yard website using HTML, CSS, JavaScript, and GSAP.
                   </p>
-                  <div className='project-link'>
-                    <Link to="https://golf-website-amber.vercel.app/" target="_blank" rel="noopener noreferrer">
-                      <button className="cta-button">
-                        <span>Visit Website</span>
-                        <svg width="15px" height="10px" viewBox="0 0 13 10">
-                          <path d="M1,5 L11,5"></path>
-                          <polyline points="8 1 12 5 8 9"></polyline>
-                        </svg>
-                      </button>
-                    </Link>
-                  </div>
+                </div>
+              </div>
+              <div className="project-details">
+                <p className="project-description">
+                  I developed a visually engaging Golf Yard website for a client using HTML, CSS, JavaScript, and GSAP. The site features smooth scroll animations, an elegant layout, and responsive design to showcase golf courses, services, and events. It offers users an immersive and interactive browsing experience, optimized for all devices.
+                </p>
+                <div className='project-link'>
+                  <Link to="https://golf-website-amber.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <button className="cta-button">
+                      <span>Visit Website</span>
+                      <svg width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        {/* Upcoming Projects Section */}
-        <UpcomingProjects />
         {/* Connect Section */}
         <h1 className='coonect-headig'>Connect with me</h1>
         <div style={{ height: '400px', position: 'relative' }}>
