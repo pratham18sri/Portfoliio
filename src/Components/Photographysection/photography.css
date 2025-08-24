@@ -1,0 +1,241 @@
+/* Photography Section */
+.photography-section {
+  padding: 5rem 2rem;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper-container {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  margin: 2rem 0;
+}
+
+.photo-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+}
+
+.swiper-slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.swiper-slide-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  padding: 1.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide:hover .photo-info {
+  opacity: 1;
+}
+
+.photo-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.photo-info p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.photography-description {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Fun Facts Section */
+.fun-facts-section {
+  padding: 5rem 2rem;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.fact-card {
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(40, 40, 40, 0.8);
+}
+
+.fact-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.fact-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.fact-card p {
+  color: var(--text-color);
+  opacity: 0.9;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .swiper-container {
+    height: 350px;
+    max-width: 350px;
+  }
+  
+  .facts-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .fact-card {
+    padding: 1.5rem;
+  }
+  
+  .fact-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-container {
+    height: 300px;
+    max-width: 300px;
+  }
+  
+  .photography-section {
+    padding: 3rem 1rem;
+  }
+}
+/* Photography Section Typography */
+.photography-section .section-header p {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.8px;
+  margin-top: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.5;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.photography-description {
+  max-width: 800px;
+  margin: 3rem auto 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #d1d1d1;
+  font-weight: 400;
+  font-family: 'Cormorant Garamond', serif;
+  padding: 0 1rem;
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+.photography-description::before,
+.photography-description::after {
+  content: '"';
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.25);
+  position: relative;
+  top: 1.2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.photography-description::before {
+  margin-right: 0.8rem;
+}
+
+.photography-description::after {
+  margin-left: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .photography-section .section-header p {
+    font-size: 1.4rem;
+    letter-spacing: 0.6px;
+  }
+  
+  .photography-description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+  
+  .photography-description::before,
+  .photography-description::after {
+    font-size: 2.8rem;
+    top: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photography-section .section-header p {
+    font-size: 1.2rem;
+    letter-spacing: 0.4px;
+  }
+  
+  .photography-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .photography-description::before,
+  .photography-description::after {
+    font-size: 2.2rem;
+    top: 0.6rem;
+  }
+}

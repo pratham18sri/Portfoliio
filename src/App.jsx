@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Background from '../src/Components/Background/Background';
 import Welcome from '../src/Components/Welcome/Welcome';
+import PhotographySection from './Components/Photographysection/photographysection';
 import Coonect from './Components/Connect/connect';
 import './App.css';
 import logo from './assets/logo.png';
@@ -351,7 +352,7 @@ function App() {
             <Coonect items={demoItems} />
           </div>
         </section>
-
+        <PhotographySection />
         {/* Fun Facts Section */}
         <section className="fun-facts-section">
           <div className="section-header">
